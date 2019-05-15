@@ -1,5 +1,5 @@
 @import 'global';
-$headerTextSize: 70%;
+$headerTextSize: 66%;
 $svgSize: 7.4mm;
 
 #header {
@@ -13,8 +13,14 @@ $svgSize: 7.4mm;
     h1 {
       @extend %header-font;
       font-weight: 900;
-      font-size: 3em;
+      font-size: 12mm;
       float: left;
+      //   font-variant: small-caps;
+      text-transform: uppercase;
+
+      span {
+        font-size: 13.3mm;
+      }
     }
     p {
       @extend %txt-font;
@@ -44,6 +50,20 @@ $svgSize: 7.4mm;
     label {
       @extend %txt-font;
       margin: auto 0;
+      font-size: 5mm;
+    }
+
+    a,
+    a:hover,
+    a:visited,
+    a:link,
+    a:active > label {
+      color: black;
+      text-decoration: none;
+    }
+
+    a:hover > label {
+      color: rebeccapurple;
     }
   }
 }
