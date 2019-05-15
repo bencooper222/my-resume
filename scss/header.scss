@@ -1,0 +1,49 @@
+@import 'global';
+$headerTextSize: 70%;
+$svgSize: 7.4mm;
+
+#header {
+  width: 100%;
+  display: flex;
+  height: fit-content;
+
+  #rightText {
+    width: $headerTextSize;
+
+    h1 {
+      @extend %header-font;
+      font-weight: 900;
+      font-size: 3em;
+      float: left;
+    }
+    p {
+      @extend %txt-font;
+      font-size: 1.1em;
+      font-weight: 400;
+    }
+  }
+
+  // h2 {
+  //   font-weight: 400;
+  // }
+
+  #iconBox {
+    width: 100% - $headerTextSize;
+    float: left;
+
+    span {
+      display: flex;
+    }
+    svg {
+      width: $svgSize;
+      height: $svgSize;
+      vertical-align: middle;
+      margin-right: 2.4mm;
+    }
+
+    label {
+      @extend %txt-font;
+      margin: auto 0;
+    }
+  }
+}

@@ -7,20 +7,45 @@
     <title>Ben Cooper's Resume</title>
 
     <link
-      href="https://fonts.googleapis.com/css?family=Karla|Bitter"
+      href="https://fonts.googleapis.com/css?family=Bitter|Roboto|Roboto+Slab"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="node_modules/paper-css/paper.css" />
-    <link rel="stylesheet" href="main.scss" />
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/" />
+    <link rel="stylesheet" href="scss/main.scss" />
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/sprites/brands.svg"
+    />
   </head>
 
   <body class="letter">
     <div class="sheet">
       <div id="header">
-        <h1>Benjamin Cooper</h1>
-        <div id="contact"></div>
+        <div id="rightText">
+          <h1>Benjamin Cooper</h1>
+          <p>bencooper222@gmail.com</p>
+          <!-- should this be something else? -->
+        </div>
+
+        <div id="iconBox">
+          <span>
+            <svg>
+              <use
+                xlink:href="node_modules/@fortawesome/fontawesome-free/sprites/solid.svg#envelope"
+              ></use>
+            </svg>
+            <label>bencooper222@gmail.com</label>
+          </span>
+          <span>
+            <svg>
+              <use
+                xlink:href="node_modules/@fortawesome/fontawesome-free/sprites/brands.svg#github"
+              ></use>
+            </svg>
+            <label>bencooper222</label>
+          </span>
+        </div>
       </div>
     </div>
   </body>
