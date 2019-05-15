@@ -1,0 +1,47 @@
+@page {
+  size: letter;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.sheet {
+  padding: 8.5mm;
+  // display: inline-block;
+}
+
+%all-text {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Bitter', serif;
+  @extend %all-text;
+}
+
+p {
+  @extend %all-text;
+}
+
+#header {
+  width: 100%;
+
+  h1 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 3em;
+    width: 80%;
+    float: left;
+  }
+
+  h2 {
+    font-weight: 400;
+  }
+}
