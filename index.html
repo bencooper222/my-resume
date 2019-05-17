@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width" />
 
     <title>Ben Cooper's Resume</title>
-
+    <link
+      rel="icon"
+      href="https://shared.benc.io/favicon-min.png"
+      type="image/x-icon"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Bitter|Roboto"
       rel="stylesheet"
@@ -24,25 +28,29 @@
       <div id="header">
         <div id="rightText">
           <h1><span>B</span>enjamin <span>C</span>ooper</h1>
-          <p>bencooper222@gmail.com</p>
           <!-- should this be something else? -->
         </div>
 
         <div id="iconBox">
           <span>
-            <svg>
+            <svg id="envelope">
               <use
                 href="node_modules/@fortawesome/fontawesome-free/sprites/solid.svg#envelope"
               ></use>
             </svg>
-            <label>bencooper222@gmail.com</label>
+
+            <a href="mailto:bencooper222@gmail.com">
+              <label>bencooper222@gmail.com</label></a
+            >
           </span>
+
           <span>
-            <svg>
+            <svg id="github">
               <use
                 href="node_modules/@fortawesome/fontawesome-free/sprites/brands.svg#github"
               ></use>
             </svg>
+
             <a href="https://github.com/bencooper222">
               <label>bencooper222</label></a
             >

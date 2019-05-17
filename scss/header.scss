@@ -1,5 +1,5 @@
 @import 'global';
-$headerTextSize: 66%;
+$headerTextSize: 64%;
 $svgSize: 7.4mm;
 
 #header {
@@ -13,19 +13,14 @@ $svgSize: 7.4mm;
     h1 {
       @extend %header-font;
       font-weight: 900;
-      font-size: 12mm;
+      font-size: 11.7mm;
       float: left;
       //   font-variant: small-caps;
       text-transform: uppercase;
 
       span {
-        font-size: 13.3mm;
+        font-size: 13mm;
       }
-    }
-    p {
-      @extend %txt-font;
-      font-size: 1.1em;
-      font-weight: 400;
     }
   }
 
@@ -36,21 +31,38 @@ $svgSize: 7.4mm;
   #iconBox {
     width: 100% - $headerTextSize;
     float: left;
-
+    padding-top: 1.2mm;
     span {
       display: flex;
+      margin-bottom: 1mm;
     }
+
     svg {
+      vertical-align: middle;
+    }
+
+    svg#github {
       width: $svgSize;
       height: $svgSize;
-      vertical-align: middle;
       margin-right: 2.4mm;
+    }
+
+    $envelopeSizeModifier: -1mm;
+    svg#envelope {
+      width: $svgSize + $envelopeSizeModifier;
+      height: $svgSize + $envelopeSizeModifier;
+      margin-left: -$envelopeSizeModifier / 2;
+      margin-right: 2.4mm - $envelopeSizeModifier / 2;
     }
 
     label {
       @extend %txt-font;
       margin: auto 0;
-      font-size: 5mm;
+      font-size: 4.5mm;
+    }
+
+    a > label {
+      margin: auto 0;
     }
 
     a,
@@ -64,6 +76,7 @@ $svgSize: 7.4mm;
 
     a:hover > label {
       color: rebeccapurple;
+      cursor: pointer;
     }
   }
 }
