@@ -3,6 +3,7 @@
   "description": "My resume as a website.",
   "version": "1.0.0",
   "devDependencies": {
+    "electron-pdf": "^4.0.5",
     "node-sass": "^4.12.0",
     "parcel-bundler": "^1.12.3",
     "prettier": "^1.17.1"
@@ -10,7 +11,8 @@
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build index.html",
-    "lint": "prettier --write scss/* index.html"
+    "lint": "prettier --write scss/* index.html",
+    "pdf": "electron-pdf dist/index.html dist/pdf.pdf"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.2",
