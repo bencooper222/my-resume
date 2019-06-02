@@ -1,0 +1,29 @@
+@import 'global';
+
+.section {
+  margin-bottom: 3mm;
+  h2 {
+    @extend %header-font;
+  }
+
+  ul {
+    margin: 0;
+    margin-top: 2mm;
+    list-style: none;
+    padding: 0;
+    margin-left: 3mm;
+  }
+  li {
+    @extend %txt-font;
+    margin-bottom: 0.7mm;
+  }
+
+  li::before {
+    content: '—';
+  }
+}
+
+// override for schools
+#education > ul > li::before {
+  content: none;
+}

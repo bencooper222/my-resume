@@ -1,5 +1,5 @@
 @import 'global';
-$headerTextSize: 64%;
+$headerTextSize: 69.5%;
 $svgSize: 7.4mm;
 
 #header {
@@ -7,17 +7,22 @@ $svgSize: 7.4mm;
   display: flex;
   height: fit-content;
 
+  // border and spacing stuff
+  // border-bottom: 1px solid black;
+  // padding-bottom: 2mm;
+  margin-bottom: 6mm;
+
   #rightText {
     width: $headerTextSize;
 
     h1 {
       @extend %header-font;
       font-weight: 700;
-      font-size: 12.5mm;
+      font-size: 13mm;
       float: left;
       //   font-variant: small-caps;
-      text-transform: uppercase;
-
+      margin-top: -0.1 mm;
+      margin-bottom: -1.3mm;
       span {
         font-size: 13mm;
       }
@@ -41,13 +46,14 @@ $svgSize: 7.4mm;
       vertical-align: middle;
     }
 
+    $githubSizeModifier: -0.1mm;
     svg#github {
-      width: $svgSize;
-      height: $svgSize;
+      width: $svgSize + $githubSizeModifier;
+      height: $svgSize + $githubSizeModifier;
       margin-right: 2.4mm;
     }
 
-    $envelopeSizeModifier: -1mm;
+    $envelopeSizeModifier: -1.05mm;
     svg#envelope {
       width: $svgSize + $envelopeSizeModifier;
       height: $svgSize + $envelopeSizeModifier;
@@ -58,24 +64,17 @@ $svgSize: 7.4mm;
     label {
       @extend %txt-font;
       font-size: 4.1mm;
-      display: inline-block;
-      margin: 0 auto;
-      height: 100%;
-      padding: 0 auto;
-    }
-
-    a > label {
-      
-      
-      
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
     }
 
     a,
-    a:hover,
     a:visited,
     a:link,
     a:active > label {
       color: black;
+      position: relative;
       text-decoration: none;
     }
 
