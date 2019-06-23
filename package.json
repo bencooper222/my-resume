@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build index.html",
-    "lint": "prettier --write scss/* index.html",
+    "lint": "prettier --write scss/* *.html",
     "pdf": "electron-pdf dist/index.html dist/pdf.pdf"
   },
   "dependencies": {
