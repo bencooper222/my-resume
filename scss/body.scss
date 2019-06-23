@@ -13,13 +13,29 @@
     padding: 0;
     margin-left: 3mm;
   }
+
   li {
     @extend %txt-font;
     margin-bottom: 0.7mm;
+    font-size: 4.05mm;
   }
 
   li::before {
     content: '—';
+  }
+
+  .subsection {
+    margin-top: 2mm;
+    h3 {
+      text-transform: none;
+      font-weight: 900;
+      font-size: 4.6mm;
+      @extend %txt-font;
+    }
+
+    ul {
+      margin-top: 0mm;
+    }
   }
 }
 
