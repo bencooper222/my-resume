@@ -1,4 +1,4 @@
-@import "global";
+@import 'global';
 $headerTextSize: 69.5%;
 $svgSize: 7.4mm;
 
@@ -47,14 +47,15 @@ $svgSize: 7.4mm;
     }
 
     $githubSizeModifier: -0.1mm;
-    svg#github {
+
+    #github {
       width: $svgSize + $githubSizeModifier;
       height: $svgSize + $githubSizeModifier;
       margin-right: 2.4mm;
     }
 
     $envelopeSizeModifier: -1.05mm;
-    svg#envelope {
+    #envelope {
       width: $svgSize + $envelopeSizeModifier;
       height: $svgSize + $envelopeSizeModifier;
       margin-left: -$envelopeSizeModifier / 2;
