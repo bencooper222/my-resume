@@ -18,7 +18,6 @@
   li {
     @extend %txt-font;
     margin-bottom: 0.1mm;
-    font-size: 4.05mm;
   }
 
   li::before {
@@ -37,8 +36,11 @@
 
     span {
       @extend %txt-font;
-      font-style: italic;
-      float: right;
+
+      p {
+        float: right;
+        font-style: italic;
+      }
     }
 
     ul {
