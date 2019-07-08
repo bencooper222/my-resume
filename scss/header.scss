@@ -1,4 +1,4 @@
-@import 'global';
+@import "global";
 $headerTextSize: 69.5%;
 $svgSize: 7.4mm;
 
@@ -63,7 +63,6 @@ $svgSize: 7.4mm;
 
     label {
       @extend %txt-font;
-      font-size: 4.1mm;
       top: 50%;
       transform: translateY(-50%);
       position: absolute;
