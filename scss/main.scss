@@ -20,8 +20,10 @@ h3,
 h4,
 h5 {
   @extend %all-text;
+  @extend %noselect;
 }
 
 p {
   @extend %all-text;
+  @extend %noselect;
 }
