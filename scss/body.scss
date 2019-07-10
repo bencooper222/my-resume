@@ -17,6 +17,8 @@
 
   li {
     @extend %txt-font;
+    @extend %noselect;
+
     margin-bottom: 0.01mm;
   }
 
@@ -47,6 +49,7 @@
     ul {
       margin-top: 0mm;
       clear: both;
+      @extend %noselect;
     }
   }
 }

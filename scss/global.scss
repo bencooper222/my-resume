@@ -18,3 +18,10 @@
   font-family: 'Open Sans', sans-serif;
   font-display: auto;
 }
+
+%noselect {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
