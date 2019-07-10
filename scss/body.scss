@@ -1,4 +1,4 @@
-@import "global";
+@import 'global';
 
 .section {
   margin-bottom: 3mm;
@@ -17,11 +17,12 @@
 
   li {
     @extend %txt-font;
-    margin-bottom: 0.1mm;
+    margin-bottom: 0.01mm;
   }
 
   li::before {
-    content: "—";
+    content: '— ';
+    // content: '-';
   }
 
   .subsection {
@@ -29,7 +30,7 @@
     h3 {
       text-transform: none;
       font-weight: 700;
-      font-size: 4.05mm;
+      font-size: 3.58mm;
       @extend %txt-font;
       float: left;
     }
