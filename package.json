@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.2",
-    "paper-css": "^0.4.1"
+    "paper-css": "^0.4.1",
+    "puppeteer": "^1.18.1"
   }
 }
