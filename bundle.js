@@ -33,7 +33,7 @@ async function printPDF() {
     minify: true,
     scopeHoist: true,
   });
-  bundler.bundle();
+  await bundler.bundle();
 
   const serve = serveStatic('dist', { index: ['index.html'] });
   const server = http.createServer(function onRequest(req, res) {
