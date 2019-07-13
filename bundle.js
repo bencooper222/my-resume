@@ -23,6 +23,9 @@ async function printPDF() {
 }
 
 (async () => {
+  // need to delete file to allow rebuild
+  fs.unlinkSync(`./dist/${pdfName}.pdf`);
+
   const bundler = new parcel(path.join(__dirname, './index.html'), {
     publicUrl: './',
     watch: false,
