@@ -44,7 +44,7 @@ async function printPDF() {
   printPDF();
 
   const closeServer = path => {
-    if (path === fullPdfPath) {
+    if (path === fullPdfPath.slice(2)) {
       console.log(`server closed because ${path} added`);
       server.close();
       watcher.close();
