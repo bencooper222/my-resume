@@ -23,8 +23,9 @@ async function printPDF() {
 }
 
 (async () => {
+  const fullPdfPath = `./dist/${pdfName}.pdf`;
   // need to delete file to allow rebuild
-  fs.unlinkSync(`./dist/${pdfName}.pdf`);
+  if (fs.existsSync(fullPdfPath)) fs.unlinkSync(fullPdfPath);
 
   const bundler = new parcel(path.join(__dirname, './index.html'), {
     publicUrl: './',
@@ -43,7 +44,7 @@ async function printPDF() {
   printPDF();
 
   const closeServer = path => {
-    if (path === `dist/${pdfName}.pdf`) {
+    if (path === fullPdfPath) {
       console.log(`server closed because ${path} added`);
       server.close();
       watcher.close();
