@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer');
+const r = require('puppeteer');
 const fs = require('fs');
 const parcel = require('parcel-bundler');
 const path = require('path');
@@ -44,6 +44,7 @@ async function printPDF() {
       console.log(`server closed because ${path} added`);
       server.close();
       watcher.close();
+      process.exit(0);
     }
   };
 
