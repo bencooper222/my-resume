@@ -1,4 +1,4 @@
-const r = require('puppeteer');
+const puppeteer = require('puppeteer');
 const fs = require('fs');
 const parcel = require('parcel-bundler');
 const path = require('path');
