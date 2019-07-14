@@ -2,6 +2,18 @@
 $headerTextSize: 69.5%;
 $svgSize: 7.4mm;
 
+#overlay {
+  background-color: #00000037;
+  height: 19.39mm + 6.35mm;
+  z-index: 10;
+  margin-top: -6.35mm;
+  margin-left: -6.35mm;
+  margin-right: -6.35mm;
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+}
+
 #header {
   width: 100%;
   display: flex;
