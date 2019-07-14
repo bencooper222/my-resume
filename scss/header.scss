@@ -63,7 +63,7 @@ $svgSize: 7.4mm;
       margin-right: 2.4mm - $envelopeSizeModifier / 2;
     }
 
-    label {
+    p {
       @extend %txt-font;
       @extend %noselect;
 
