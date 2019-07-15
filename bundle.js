@@ -1,11 +1,15 @@
-const puppeteer = require('puppeteer');
 const fs = require('fs');
-const parcel = require('parcel-bundler');
 const path = require('path');
+
+const parcel = require('parcel-bundler');
+const puppeteer = require('puppeteer');
+
 const finalhandler = require('finalhandler');
 const http = require('http');
 const serveStatic = require('serve-static');
+
 const chokidar = require('chokidar');
+const purify = require('purify-css');
 
 const PORT = 1234;
 const pdfName = 'resume';
@@ -22,6 +26,22 @@ async function printPDF() {
   return pdf;
 }
 
+// run after parcel bundle
+const purifyFlow = () => {
+  const fileReadWithEncoding = path => fs.readFileSync(path, { encoding: 'utf8' });
+  const html = fileReadWithEncoding('dist/index.html');
+  const cssFiles = fs.readdirSync('dist').filter(el => el.slice(-3) === 'css');
+
+  cssFiles.forEach(file => {
+    const fullPath = `dist/${file}`;
+    purify(html, fileReadWithEncoding(fullPath), {
+      output: fullPath,
+      minify: true,
+      info: true,
+    });
+  });
+};
+
 (async () => {
   const fullPdfPath = `./dist/${pdfName}.pdf`;
   // need to delete file to allow rebuild
@@ -34,10 +54,10 @@ async function printPDF() {
     scopeHoist: true,
   });
   await bundler.bundle();
+  purifyFlow(); // needs to happen after parcel stuff
 
-  const serve = serveStatic('dist', { index: ['index.html'] });
   const server = http.createServer(function onRequest(req, res) {
-    serve(req, res, finalhandler(req, res));
+    serveStatic('dist', { index: ['index.html'] })(req, res, finalhandler(req, res));
   });
   server.listen(PORT);
 
