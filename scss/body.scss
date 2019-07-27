@@ -57,6 +57,7 @@
 
         a:hover {
           color: rebeccapurple;
+          transition: 0.5s;
         }
       }
     }
@@ -73,6 +74,10 @@
 .bold {
   font-weight: 700;
   font-weight: bold;
+}
+
+.nobold {
+  font-weight: 400;
 }
 
 $beforeContent: ' ';
