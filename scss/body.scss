@@ -27,10 +27,9 @@
   }
 
   .subsection {
-    margin-top: 1mm;
+    margin-top: 1.1mm;
     h3 {
       text-transform: none;
-      font-weight: 700;
       font-size: 3.58mm;
       @extend %txt-font;
       float: left;
@@ -71,15 +70,29 @@
   }
 }
 
+.bold {
+  font-weight: 700;
+  font-weight: bold;
+}
+
 $beforeContent: ' ';
 // override for skills
-#skills > ul > li::before {
+#skills > ul {
   // content: none;
-  content: $beforeContent;
+
+  margin-left: 0;
+
+  li::before {
+    content: $beforeContent;
+  }
 }
 
 // override for skills
-#education > ul > li::before {
-  // content: none;
-  content: $beforeContent;
+#education > ul {
+  margin-left: 0;
+  li::before {
+    content: $beforeContent;
+  }
+
+  // content: $beforeContent;
 }
