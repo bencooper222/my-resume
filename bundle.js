@@ -14,11 +14,12 @@ const purify = require('purify-css');
 const PORT = 1234;
 const pdfName = 'resume';
 
-async function printPDF() {
+async function printPDFAndImage() {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   await page.goto(`http://localhost:${PORT}`, { waitUntil: 'networkidle0' });
   const pdf = await page.pdf({ format: 'letter' });
+  await page.screenshot({ path: `./dist/og.png` });
 
   await browser.close();
 
@@ -61,7 +62,7 @@ const purifyFlow = () => {
   });
   server.listen(PORT);
 
-  printPDF();
+  printPDFAndImage();
 
   const closeServer = path => {
     if (path === fullPdfPath.slice(2)) {

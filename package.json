@@ -8,6 +8,7 @@
   },
   "version": "1.0.0",
   "devDependencies": {
+    "@types/puppeteer": "^1.19.0",
     "chokidar": "^3.0.2",
     "finalhandler": "^1.1.2",
     "node-sass": "^4.12.0",
