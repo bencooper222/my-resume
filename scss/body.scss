@@ -22,8 +22,8 @@
   }
 
   li::before {
-    content: '— ';
-    // content: '-';
+    // content: '— ';
+    content: '- ';
   }
 
   .subsection {
@@ -62,9 +62,24 @@
       }
     }
   }
+
+  #skillList {
+    height: 25mm;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 
-// override for schools
+$beforeContent: ' ';
+// override for skills
+#skills > ul > li::before {
+  // content: none;
+  content: $beforeContent;
+}
+
+// override for skills
 #education > ul > li::before {
-  content: none;
+  // content: none;
+  content: $beforeContent;
 }
