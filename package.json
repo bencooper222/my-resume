@@ -22,11 +22,11 @@
     "dev": "parcel index.html",
     "build": "parcel build index.html",
     "prod": "node bundle.js",
-    "lint": "prettier --write scss/* *.html *.md",
-    "pdf": "electron-pdf dist/index.html dist/pdf.pdf"
+    "lint": "prettier --write scss/* *.html *.md"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
+    "instant.page": "^2.0.1",
     "paper-css": "^0.4.1"
   }
 }
