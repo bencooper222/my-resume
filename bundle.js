@@ -9,7 +9,6 @@ const http = require('http');
 const serveStatic = require('serve-static');
 
 const chokidar = require('chokidar');
-const purify = require('purify-css');
 
 const PORT = 1234;
 const pdfName = 'resume';
@@ -27,22 +26,6 @@ async function printPDFAndImage() {
   return pdf;
 }
 
-// run after parcel bundle
-const purifyFlow = () => {
-  const fileReadWithEncoding = path => fs.readFileSync(path, { encoding: 'utf8' });
-  const html = fileReadWithEncoding('dist/index.html');
-  const cssFiles = fs.readdirSync('dist').filter(el => el.slice(-3) === 'css');
-
-  cssFiles.forEach(file => {
-    const fullPath = `dist/${file}`;
-    purify(html, fileReadWithEncoding(fullPath), {
-      output: fullPath,
-      minify: true,
-      info: true,
-    });
-  });
-};
-
 (async () => {
   const fullPdfPath = `./dist/${pdfName}.pdf`;
   // need to delete file to allow rebuild
@@ -55,7 +38,7 @@ const purifyFlow = () => {
     scopeHoist: true,
   });
   await bundler.bundle();
-  purifyFlow(); // needs to happen after parcel stuff
+  // purifyFlow(); // needs to happen after parcel stuff
 
   const server = http.createServer(function onRequest(req, res) {
     serveStatic('dist', { index: ['index.html'] })(req, res, finalhandler(req, res));
