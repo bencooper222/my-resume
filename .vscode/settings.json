@@ -1,3 +1,6 @@
 {
-  "files.associations": { ".htmlnanorc": "json" }
+  "files.associations": {
+    ".htmlnanorc": "json"
+  },
+  "deepscan.enable": true
 }
