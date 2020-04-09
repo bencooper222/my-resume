@@ -15,7 +15,7 @@ const PORT = 1234;
 const pdfName = 'resume';
 
 async function printPDFAndImage() {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await browser.newPage();
   await page.goto(`http://localhost:${PORT}`, { waitUntil: 'networkidle0' });
   const pdf = await page.pdf({ format: 'letter' });
