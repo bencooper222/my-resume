@@ -19,7 +19,7 @@ async function printPDFAndImage() {
   const page = await browser.newPage();
   await page.goto(`http://localhost:${PORT}`, { waitUntil: 'networkidle0' });
   const pdf = await page.pdf({ format: 'letter' });
-  await page.screenshot({ path: `./dist/og.png` }); // TODO: add clip property
+  await page.screenshot({ path: `./static/og.png` }); // TODO: add clip property
 
   await browser.close();
 
