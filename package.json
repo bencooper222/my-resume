@@ -25,7 +25,7 @@
     "dev": "parcel index.html",
     "build": "parcel build index.html",
     "prod": "node bundler/index.js",
-    "lint": "prettier --write scss/* *.html *.md"
+    "lint": "prettier --write scss/* *.html *.md bundler/*.js styles/*.{scss,css}"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
