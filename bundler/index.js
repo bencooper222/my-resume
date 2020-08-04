@@ -24,4 +24,5 @@ const Parcel = require('parcel-bundler');
   await addOgImage();
 
   console.log('Finish');
+  process.exit(0);
 })();
