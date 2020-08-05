@@ -13,6 +13,7 @@ const bundle = async () => {
     scopeHoist: true,
     logLevel: 1,
   });
+
   await bundler.bundle();
   console.log('Start purifying');
   purifyFlow(); // needs to happen after parcel stuff
