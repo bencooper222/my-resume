@@ -4,7 +4,7 @@ const { addOgImage } = require('./postHtml');
 
 const Parcel = require('parcel-bundler');
 
-(async () => {
+const bundle = async () => {
   console.log('Start bundling');
   const bundler = new Parcel('./index.html', {
     publicUrl: './',
@@ -25,4 +25,9 @@ const Parcel = require('parcel-bundler');
 
   console.log('Finish');
   process.exit(0);
-})();
+};
+
+bundle().catch(err => {
+  console.error(err);
+  process.exit(1);
+});
