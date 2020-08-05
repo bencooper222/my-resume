@@ -11,7 +11,15 @@ exports.addOgImage = () => {
     .use(
       insertAt({
         selector: 'head',
-        append: '<meta property="og:image" content="./og.png" />',
+        append: '<meta property="og:image" content="/og.png">',
+      }),
+      insertAt({
+        selector: 'head',
+        append: '<meta name="twitter:card" content="summary_large_image">',
+      }),
+      insertAt({
+        selector: 'head',
+        append: '<meta name="twitter:image" content="https://resume.benc.io/og.png">',
       }),
     )
     .process(html)
