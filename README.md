@@ -4,4 +4,4 @@ This is my resume. I'm quite a big fan of rendering it in HTML. It's super fast 
 
 ## License
 
-This repo is licensed under the MIT license EXCEPT the index.html to which I reserve all rights. 
+This repo is licensed under the MIT license EXCEPT the index.html to which I reserve all rights.
