@@ -15,16 +15,16 @@ const printPDFAndImage = async function() {
   await page.goto(`http://localhost:${PORT}`, { waitUntil: 'networkidle0' });
   const pdf = await page.pdf({ format: 'letter' });
 
-  page.setViewport({ width: 1200, height: 1080 });
+  page.setViewport({ width: 1200, height: 700, deviceScaleFactor: 1 });
   await page.screenshot({
     path: `./dist/og.png`,
 
     clip: {
+      // https://iamturns.com/open-graph-image-size/
       width: 1200,
       height: 630,
-
-      y: -100,
-      x: -500,
+      y: 0,
+      x: 0,
     },
   }); // TODO: add clip property
 
