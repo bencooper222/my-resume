@@ -1,5 +1,5 @@
 @import 'global';
-$headerTextSize: 69.5%;
+$headerTextSize: 80%;
 $svgSize: 7.4mm;
 
 #header {
@@ -9,7 +9,7 @@ $svgSize: 7.4mm;
 
   margin-bottom: 3.2mm;
 
-  #rightText {
+  #leftText {
     width: $headerTextSize;
 
     h1 {
@@ -48,8 +48,9 @@ $svgSize: 7.4mm;
 
   #iconBox {
     width: 100% - $headerTextSize;
-    float: left;
-    padding-top: 1.2mm;
+    float: right;
+    padding-top: 2mm;
+    // margin-left: 50
 
     span {
       display: flex;
@@ -61,11 +62,12 @@ $svgSize: 7.4mm;
     }
 
     $githubSizeModifier: -0.12mm;
+    $baselineMarginRight: 2.4mm;
 
     #github {
       width: $svgSize + $githubSizeModifier;
       height: $svgSize + $githubSizeModifier;
-      margin-right: 2.4mm;
+      margin-right: $baselineMarginRight;
     }
 
     $envelopeSizeModifier: -1.05mm;
@@ -73,7 +75,7 @@ $svgSize: 7.4mm;
       width: $svgSize + $envelopeSizeModifier;
       height: $svgSize + $envelopeSizeModifier;
       margin-left: -$envelopeSizeModifier / 2;
-      margin-right: 2.4mm - $envelopeSizeModifier / 2;
+      margin-right: $baselineMarginRight - $envelopeSizeModifier / 2;
     }
 
     p {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="Description" content="The resume of Ben Cooper, software engineer." />
 
@@ -26,7 +26,7 @@
   <body class="letter">
     <div class="sheet">
       <div id="header">
-        <div id="rightText">
+        <div id="leftText">
           <h1><a target="_blank" rel="noopener" href="https://benc.io">Benjamin Cooper</a></h1>
           <!-- should this be something else? -->
         </div>
@@ -41,8 +41,8 @@
             </svg>
 
             <p>
-              <a href="mailto:bencooper222@gmail.com">
-                bencooper222@gmail.com
+              <a href="mailto:benc@hey.com">
+                benc@hey.com
               </a>
             </p>
           </span>
@@ -63,30 +63,77 @@
         </div>
       </div>
 
-      <div class="section" id="education">
-        <h2>Education</h2>
-        <ul>
-          <li>
-            Vanderbilt University (2020) — B.S. in Computer Science; Minor in World Politics
-          </li>
-          <li>
-            Illinois Mathematics & Science Academy (2016) — Received Diploma
-          </li>
-        </ul>
-      </div>
-
       <div class="section" id="work">
         <h2>Experience</h2>
 
         <div class="subsection">
           <span>
             <h3 class="bold">
-              Convoy | <span class="nobold">Software Engineer on Platform & Test</span>
+              Convoy |
+              <span class="nobold"
+                >Senior Software Engineer on Production & Development Experience</span
+              >
             </h3>
-            <p>June 2020 - Present</p>
+            <p>2022 - 2023</p>
           </span>
+          <ul>
+            <li>
+              Led three-person team to develop new microservice test & development environment using
+              Kubernetes
+              <ul>
+                <li>
+                  Worked with third-party vendors to determine Convoy needed to build instead of buy
+                </li>
+                <li>
+                  Interviewed customers to collect requirements and designed system architecture
+                </li>
+                <li>
+                  Reduced E2E test times by 11 minutes (~92%)
+                </li>
+              </ul>
+            </li>
+            <li>
+              Developed and executed standard procedure for Convoy's first Kubernetes and Istio
+              upgrades
+              <ul>
+                <li>Upgrade unlocked 33% reduction in AWS data transfer spend</li>
+              </ul>
+            </li>
+            <li>
+              Standardized company-wide Docker image building to be SOC2 compliant and easy for all
+              developers
+            </li>
+            <li>
+              Led technical side of internal wiki migration; wrote data scraper/exporter when vendor
+              tool did not work
+            </li>
+          </ul>
         </div>
-        <br />
+
+        <div class="subsection">
+          <span>
+            <h3 class="bold">
+              Convoy |
+              <span class="nobold">Software Engineer on Development & Test Experience</span>
+            </h3>
+            <p>2020 - 2022</p>
+          </span>
+          <ul>
+            <li>Improved E2E test times by four minutes (25%) by dockerizing test runner</li>
+            <li>
+              Worked with vendor to establish service ownership and health registry for ~200
+              microservices
+            </li>
+            <li>
+              Owned operational metrics: kept ~180 of 200 services up-to-date and drove down # of
+              on-call pages
+            </li>
+            <li>
+              Led four-person team to eliminate all x86 developer dependencies to prepare for Apple
+              Silicon Macs
+            </li>
+          </ul>
+        </div>
         <div class="subsection">
           <span>
             <h3 class="bold">
@@ -95,9 +142,10 @@
             <p>Summer 2019</p>
           </span>
           <ul>
-            <li>Implemented artifact caching for internal CI system in Java & Ruby</li>
-            <li>Wrote project pitch & technical design document</li>
-            <li>Saved thousands of developer & compute hours each week</li>
+            <li>
+              Implemented artifact caching for continuous integration system
+            </li>
+            <li>Saved thousands of developer & compute hours per week</li>
           </ul>
         </div>
 
@@ -109,56 +157,95 @@
             <p>Summer 2018</p>
           </span>
           <ul>
-            <li>Designed problem and solution views for students</li>
             <li>
-              Worked with Node, Hapi.js, React, HTML Canvas, and ES2018 on massive codebase
+              Designed web-based interactive math problems for students using React & Node
             </li>
-            <li>Fixed post-launch bugs for live users</li>
           </ul>
         </div>
 
         <div class="subsection">
           <span>
-            <h3 class="bold">
-              VandyHacks IV & V | <span class="nobold">President, Director & Mentor</span>
-            </h3>
+            <h3 class="bold">VandyHacks IV & V | <span class="nobold">President</span></h3>
             <p>2016 - 2020</p>
           </span>
           <ul>
-            <li>Organized two 500+ attendee hackathons</li>
-            <li>Managed $80K budget; drove down expenses to expand number of attendees by ~20%</li>
-            <li>Led 50 person organizing team across 5 committees</li>
-            <li>Expanded mini-hackathon program to spread CS culture on campus</li>
-          </ul>
-        </div>
-
-        <div class="subsection">
-          <span>
-            <h3 class="bold">
-              Spantree Technology Group | <span class="nobold">Software Engineering Intern</span>
-            </h3>
-            <p>Summer 2016</p>
-          </span>
-          <ul>
-            <li>
-              Built Slack chatbot in Groovy (JVM) to help 10 person remote team classify billable
-              hours
-            </li>
+            <li>Organized three hackathons with annual $80K budget and 500+ attendees</li>
           </ul>
         </div>
       </div>
-      <div class="section" id="Projects">
-        <h2>Selected (Personal) Projects</h2>
+      <div class="section" id="education">
+        <h2>Education</h2>
+        <div class="subsection">
+          <span>
+            <h3 class="bold" class="bold">
+              Vanderbilt University |
+              <span class="nobold"> B.S. in Computer Science; Minor in World Politics </span>
+            </h3>
 
+            <p>2020</p>
+          </span>
+          <ul></ul>
+        </div>
+        <div class="subsection">
+          <span>
+            <h3 class="bold" class="bold">
+              Illinois Mathematics and Science Academy |
+              <span class="nobold"> Received Diploma </span>
+            </h3>
+
+            <p>2016</p>
+          </span>
+          <ul></ul>
+        </div>
+
+        <!-- <ul>
+          <li>
+            Vanderbilt University (2020) — B.S. in Computer Science; Minor in World Politics
+          </li>
+          <li>
+            Illinois Mathematics & Science Academy (2016) — Received Diploma
+          </li>
+        </ul> -->
+      </div>
+      <div class="section" id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li><span class="bold">Strongest languages:</span> Javascript, Typescript, and Golang</li>
+          <li><span class="bold">Proficient languages:</span> Rust, Java, C#, Python, and R</li>
+
+          <li>
+            <span class="bold">Web technologies:</span> GraphQL, TypeORM, React, SvelteJS, and CSS
+          </li>
+          <li>
+            <span class="bold">DevOps technologies:</span> Kubernetes, Istio, AWS, and Terraform
+          </li>
+          <li><span class="bold">Tools:</span> Docker, Git, SQL, Kafka, and Bash</li>
+        </ul>
+      </div>
+
+      <div class="section" id="Projects">
+        <h2>Projects</h2>
+        <div class="subsection">
+          <span>
+            <h3 class="bold" class="bold">Seattle Surf Incubator: AI Hackathon</h3>
+            <p>Mar 2023</p>
+          </span>
+          <ul>
+            <li>
+              Created browser extension that uses GPT-4 API to dynamically change website UI based
+              on user prompt
+            </li>
+          </ul>
+        </div>
         <div class="subsection">
           <span>
             <h3 class="bold">Vaken</h3>
-            <p>2019</p>
+            <p>2019 - 2020</p>
           </span>
           <ul>
-            <li>Building open-source hackathon management platform</li>
-            <li>Deploying dev tooling to increase project velocity</li>
-            <li>Built with Typescript, GraphQL, and React Hooks</li>
+            <li>
+              Built open-source hackathon management platform with GraphQL & React
+            </li>
             <li>
               Visit:
               <a target="_blank" rel="noopener" href="https://github.com/VandyHacks/vaken">
@@ -170,12 +257,14 @@
 
         <div class="subsection">
           <span>
-            <h3 class="bold">HackIllinois: Rust Hot Module Reloading (HMR)</h3>
+            <h3 class="bold">HackIllinois: Rust Hot Module Reloading</h3>
             <p>Feb 2019</p>
           </span>
           <ul>
-            <li>Won 2<sup>nd</sup> place at HackIllinois out of ~120 entries</li>
-            <li>Built no-config HMR for Rust modules for open source Javascript bundler</li>
+            <li>
+              Contributed no-config hot-module reloading for Rust modules to open-source Javascript
+              bundler
+            </li>
             <li>
               Visit:
               <a
@@ -188,27 +277,17 @@
             </li>
           </ul>
         </div>
-        <div class="subsection">
-          <span>
-            <h3 class="bold">Github Actions Open Source Contributions</h3>
-            <p>2019</p>
-          </span>
-          <ul>
-            <li>Wrote 2 Github integrations to extend repository functionaliy</li>
-            <li>Contributed to several other open source actions</li>
-          </ul>
-        </div>
 
         <div class="subsection">
           <span>
             <h3 class="bold">Firefox Address Bar Expression Parser</h3>
-            <p>2019</p>
+            <p>2019 - Present</p>
           </span>
           <ul>
             <li>
-              Built and released Firefox extension to match Chrome's omnibox's calculator
+              Built and released Firefox extension to match Chrome's built-in calculator (still
+              maintained)
             </li>
-            <li>More accurate than competing extensions for floating point operations</li>
             <li>
               Visit:
               <a
@@ -220,37 +299,6 @@
             </li>
           </ul>
         </div>
-
-        <div class="subsection">
-          <span>
-            <h3 class="bold" class="bold">ArchHacks: Brush Brush Revolution</h3>
-            <p>Nov 2016</p>
-          </span>
-          <ul>
-            <li>
-              Awarded 1<sup>st</sup> place and Most Technically Interesting out of 100+ submissions
-            </li>
-            <li>Used computer vision to track & analyze brushing habits</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="section" id="skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>
-            <span class="bold">Languages:</span> Javascript, Typescript, Java/Groovy, Rust, Python,
-            and R
-          </li>
-          <li>
-            <span class="bold">Technologies:</span> GraphQL, React, Vue, SvelteJS, SQL, (S)CSS, and
-            AWS/Azure/GCP
-          </li>
-          <li>
-            <span class="bold">Other:</span> Public speaking, technical writing, scrum, and
-            mentorship
-          </li>
-        </ul>
       </div>
     </div>
     <script src="node_modules/instant.page/instantpage.js" type="module" defer></script>

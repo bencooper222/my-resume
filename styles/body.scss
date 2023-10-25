@@ -1,7 +1,7 @@
 @import 'global';
 
 .section {
-  margin-bottom: 2mm;
+  margin-bottom: 3mm;
   h2 {
     @extend %header-font;
     border-bottom: 2px solid black;
@@ -92,7 +92,7 @@ $beforeContent: ' ';
   }
 }
 
-// override for skills
+// override for education
 #education > ul {
   margin-left: 0;
   li::before {
